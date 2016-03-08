@@ -2,6 +2,18 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+ 
+gulp.task('imagemin', function() {
+	return gulp.src('src/images/*')
+		.pipe(imagemin({
+		progressive: true,
+		svgoPlugins: [{removeViewBox: false}],
+		use: [pngquant()]
+		}))
+		.pipe(gulp.dest('dist/images'));
+	});
 
 
 gulp.task('sass', function(){
@@ -17,4 +29,4 @@ gulp.task('copy-assets', function(){
 		.pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', ['sass', 'copy-assets']);
+gulp.task('default', ['sass', 'copy-assets', 'imagemin']);
