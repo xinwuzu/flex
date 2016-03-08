@@ -7,6 +7,11 @@ body {
 	margin: 0;
 }
 
+.peter {
+	display: flex;
+	transition: all .3s;
+}
+
 a  {
 	text-decoration: none;
 }
