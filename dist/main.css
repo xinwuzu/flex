@@ -1,0 +1,34 @@
+/*common.css */
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+header {
+  background-color: #00BCD4;
+  height: 70px; }
+
+.hero {
+  padding: 80px; }
+  .hero .btn {
+    width: 100px;
+    height: 40px;
+    margin: 20px auto;
+    background-color: #FF4081; }
+    .hero .btn:hover {
+      background-color: #ff73a3;
+      cursor: pointer; }
+
+.first {
+  height: 200px;
+  background-color: #00BCD4; }
+
+.footer {
+  height: 200px;
+  padding: 50px;
+  border-top: 5px solid #FF4081;
+  margin-top: 200px;
+  background-color: #212121; }
+
+/*sections.css*/
